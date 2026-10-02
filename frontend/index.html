@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="TaskPilot AI - Autonomous AI assistant"
+    >
+
+    <title>TaskPilot AI</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="app">
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+
+            <div class="brand">
+                <div class="brand-icon">🤖</div>
+
+                <div>
+                    <div class="brand-name">
+                        TaskPilot
+                    </div>
+
+                    <div class="brand-subtitle">
+                        AI Assistant
+                    </div>
+                </div>
+            </div>
+
+            <nav class="navigation">
+
+                <button
+                    class="nav-item active"
+                    type="button"
+                >
+                    <span>⌂</span>
+                    <span>Dashboard</span>
+                </button>
+
+                <button
+                    class="nav-item"
+                    type="button"
+                    onclick="focusGoal()"
+                >
+                    <span>🤖</span>
+                    <span>New Task</span>
+                </button>
+
+            </nav>
+
+            <div class="sidebar-bottom">
+
+                <div class="agent-status">
+                    <span class="status-dot"></span>
+
+                    <div>
+                        <strong>Agent Online</strong>
+                        <small>Ready to work</small>
+                    </div>
+                </div>
+
+            </div>
+
+        </aside>
+
+
+        <!-- Main -->
+        <main class="main">
+
+            <!-- Header -->
+            <header class="topbar">
+
+                <div>
+                    <div class="eyebrow">
+                        AUTONOMOUS WORKSPACE
+                    </div>
+
+                    <h1>
+                        What can I help you accomplish?
+                    </h1>
+                </div>
+
+                <div class="topbar-badge">
+                    <span class="pulse"></span>
+                    AI Ready
+                </div>
+
+            </header>
+
+
+            <!-- Hero -->
+            <section class="hero">
+
+                <div class="hero-content">
+
+                    <div class="hero-icon">
+                        🤖
+                    </div>
+
+                    <h2>
+                        Turn goals into actions.
+                    </h2>
+
+                    <p>
+                        Tell TaskPilot what you want to accomplish.
+                        It can plan, use tools, execute tasks,
+                        verify results, and remember important information.
+                    </p>
+
+                </div>
+
+
+                <!-- Goal Card -->
+                <div class="goal-card">
+
+                    <label for="goal">
+                        YOUR GOAL
+                    </label>
+
+                    <textarea
+                        id="goal"
+                        placeholder="Example: Prepare my task list for tomorrow and calculate how many hours I have available..."
+                        rows="5"
+                    ></textarea>
+
+                    <div class="goal-footer">
+
+                        <div class="hint">
+                            <span>⌘</span>
+                            TaskPilot will plan the steps automatically
+                        </div>
+
+                        <button
+                            id="run-button"
+                            class="run-button"
+                            type="button"
+                            onclick="window.runTaskPilot()"
+                        >
+                            <span>Run Agent</span>
+                            <span class="button-arrow">→</span>
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- Agent Activity -->
+            <section class="activity-section">
+
+                <div class="section-header">
+
+                    <div>
+                        <div class="section-label">
+                            LIVE EXECUTION
+                        </div>
+
+                        <h3>
+                            Agent Activity
+                        </h3>
+                    </div>
+
+                    <div
+                        id="connection-status"
+                        class="connection-status"
+                    >
+                        <span class="status-dot"></span>
+                        Ready
+                    </div>
+
+                </div>
+
+
+                <div
+                    id="activity"
+                    class="activity-panel"
+                >
+
+                    <div class="empty-state">
+
+                        <div class="empty-icon">
+                            🤖
+                        </div>
+
+                        <h4>
+                            Your agent is ready
+                        </h4>
+
+                        <p>
+                            Enter a goal above and TaskPilot
+                            will show its progress here.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- Workflow -->
+            <section class="workflow">
+
+                <div class="section-label">
+                    HOW TASKPILOT WORKS
+                </div>
+
+                <div class="workflow-grid">
+
+                    <div class="workflow-card">
+                        <div class="workflow-number">
+                            01
+                        </div>
+
+                        <div class="workflow-icon">
+                            ◇
+                        </div>
+
+                        <h4>
+                            Plan
+                        </h4>
+
+                        <p>
+                            Breaks your goal into actionable steps.
+                        </p>
+                    </div>
+
+
+                    <div class="workflow-card">
+                        <div class="workflow-number">
+                            02
+                        </div>
+
+                        <div class="workflow-icon">
+                            ↗
+                        </div>
+
+                        <h4>
+                            Act
+                        </h4>
+
+                        <p>
+                            Selects and executes the right tools.
+                        </p>
+                    </div>
+
+
+                    <div class="workflow-card">
+                        <div class="workflow-number">
+                            03
+                        </div>
+
+                        <div class="workflow-icon">
+                            ◉
+                        </div>
+
+                        <h4>
+                            Observe
+                        </h4>
+
+                        <p>
+                            Examines the results of each action.
+                        </p>
+                    </div>
+
+
+                    <div class="workflow-card">
+                        <div class="workflow-number">
+                            04
+                        </div>
+
+                        <div class="workflow-icon">
+                            ✓
+                        </div>
+
+                        <h4>
+                            Verify
+                        </h4>
+
+                        <p>
+                            Confirms the result before finishing.
+                        </p>
+                    </div>
+
+                </div>
+
+            </section>
+
+            <footer>
+                TaskPilot AI · Autonomous Agents for Everyday Apps
+            </footer>
+
+        </main>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
