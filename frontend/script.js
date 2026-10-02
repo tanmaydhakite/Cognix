@@ -1,4 +1,4 @@
-const BACKEND_URL = "https://cognix-backend-ahsg.onrender.com";
+const BACKEND_URL = "https://cognix-backend1.onrender.com";
 
 
 // ============================================================
